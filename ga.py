@@ -34,14 +34,38 @@ def mutacao_limitada(sol, maxmutacoes):
     for t in targets:
         sol[t] = not sol[t]
 
+def crossover_proporcional(s1, s2, f1, f2):
 
-def best_breeds_all():
-    pass
+    p = f1 / (f1 + f2)
+    if verb : print("Escolhendo s1 com ", p)
+
+    filho = []
+
+    for i in range(len(s1)):
+
+        gene = s2[i]
+        if rand.random() < p : gene = s1[i]
+        filho.append(gene)
+
+    if verb:
+        print("P1: ", s1)
+        print("P2: ", s2)
+        print(f1, f2)
+        print("Filho: ", filho)
+
+    return filho
 
 
+def best_breeds_all(ppl, aptidao):
+
+    best = max(ppl, key=aptidao) ##
+    ppl.pop(ppl.index(best))
+    apt_best = aptidao(best)
+
+    return [best] + list(map(lambda x : crossover_proporcional(best, x, apt_best, aptidao(x)), ppl))
 
 
-def genetico(populacao, adequação, cruzar, mutar, desenvolver, max_gens):
+def genetico(populacao, aptidao, cruzar, mutar, desenvolver, max_gens):
     
     while max_gens:
 
@@ -51,9 +75,24 @@ def genetico(populacao, adequação, cruzar, mutar, desenvolver, max_gens):
 
         max_gens -= 1
 
-    return max(população, key=adequação)
+    return max(população, key=aptidao)
 
-l = populacao_inicial(5, 5)
-print(l)
-for owo in l: mutacao_limitada(owo, 1)
-print(l)
+
+
+
+if __name__ == "__main__":
+
+    verb = False
+    if "-v" in sys.argv or "v" in sys.argv: 
+        verb = True
+
+    nsol = 10
+    maxgens = 100
+
+    n, m, cdb = read_cnf(sys.argv[1])
+    aptidao = lambda x : n_satisfied_clauses(x, cdb)
+    cruzamento = lambda x : best_breeds_all(x, aptidao)
+    mutacao = lambda x : mutacao_caotica(x, 0.05)
+
+    sol = genetico(populacao_inicial(n, maxgens), aptidao, cruzamento, mutacao, lambda _ : _, 20)
+    print(sol)
