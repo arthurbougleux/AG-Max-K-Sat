@@ -55,7 +55,6 @@ def crossover_proporcional(s1, s2, f1, f2):
 
     return filho
 
-
 def best_breeds_all(ppl, aptidao):
 
     best = max(ppl, key=aptidao) ##
@@ -64,6 +63,66 @@ def best_breeds_all(ppl, aptidao):
 
     return [best] + list(map(lambda x : crossover_proporcional(best, x, apt_best, aptidao(x)), ppl))
 
+def reckless_choice(sol, clauses):
+
+    n = len(sol)
+    score = [ 0 for _ in range(n) ]
+
+    for cl in clauses:
+
+        if not satisfied(sol, cl):
+            for lit in cl: score[var_i(lit)] += 1
+
+    return score.index(max(score))
+
+def cautious_choice(sol, clauses):
+
+    n = len(sol)
+    score = [ 0 for _ in range(n) ]
+
+    for cl in clauses:
+
+        satlits = []
+
+        for lit in cl:
+            if satisfies(lit, sol[var_i(lit)]): satlits.append(lit)
+
+
+        if len(satlits) == 0:
+            for lit in cl: score[var_i(lit)] += 1
+        
+        if len(satlits) > 0:
+            for lit in satlits: score[var_i(lit)] -= 1
+
+
+    return score.index(max(score))
+
+def running_up_that_hill(sol, choice, aptidao):
+
+    if verb : print(sol)
+
+    old_apt = chosen_i = -1
+    apt = aptidao(sol)
+
+    while old_apt < apt:
+
+        chosen_i = choice(sol)
+        sol[chosen_i] = not sol[chosen_i]
+
+        if verb:
+            print("Old Apt: ", old_apt)
+            print("Apt: ", apt)
+            print("Choice: ", chosen_i)
+
+        old_apt = apt
+        apt = aptidao(sol)
+
+    if verb : 
+        print("Stoped searching")
+        print()
+
+    sol[chosen_i] = not sol[chosen_i]
+        
 
 def genetico(populacao, aptidao, cruzar, mutar, desenvolver, max_gens):
     
@@ -78,21 +137,21 @@ def genetico(populacao, aptidao, cruzar, mutar, desenvolver, max_gens):
     return max(população, key=aptidao)
 
 
-
-
 if __name__ == "__main__":
 
     verb = False
     if "-v" in sys.argv or "v" in sys.argv: 
         verb = True
 
-    nsol = 10
-    maxgens = 100
+    nsol = 1
+    max_gens = 1
 
     n, m, cdb = read_cnf(sys.argv[1])
     aptidao = lambda x : n_satisfied_clauses(x, cdb)
     cruzamento = lambda x : best_breeds_all(x, aptidao)
     mutacao = lambda x : mutacao_caotica(x, 0.05)
+    choice = lambda x : cautious_choice(x, cdb)
+    desenvolvimento = lambda x : running_up_that_hill(x, choice, aptidao)
 
-    sol = genetico(populacao_inicial(n, maxgens), aptidao, cruzamento, mutacao, lambda _ : _, 20)
+    sol = genetico(populacao_inicial(n, nsol), aptidao, cruzamento, mutacao, desenvolvimento, max_gens)
     print(sol)
