@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser(description="Aplica um algoritmo genético a um
 parser.add_argument('filename', help='Input file')
 parser.add_argument('population', help='Número de indivíduos na população')
 parser.add_argument('generations', help='Número máximo de gerações')
-parser.add_argument('--uniforme', action='store', default=1, help='Probabilidade de uma cruzamento uniforme ser aplicado na geração. Ajuda a evitar convergências precoces e evita processamento de aptidao', metavar='p', type=float)
+parser.add_argument('--uniforme', action='store', default=1, help='Probabilidade de uma cruzamento uniforme ser aplicado na geração. Ajuda a evitar convergências precoces e evita processamento de aptidao. (default: 1)', metavar='p', type=float)
 parser.add_argument('--chaos', action='store', help='Mutações invertem bits quaisquer da solução com probabilidade p', metavar='p', type=float)
 parser.add_argument('--order', action='store', help='Mutações sempre invertem k variávels na solução', metavar='n', type=int)
 parser.add_argument('--search', action='store', help='Aplica uma busca local a cada geração', metavar='reckless/cautious')

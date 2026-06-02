@@ -113,7 +113,7 @@ def genetico(populacao, aptidao, cruzar, mutar, desenvolver, max_gens, p_uniform
 
     while max_gens:
         
-        proporcao_genes = (lambda _, __ : 0.5) if rand.random() < p_uniforme else (lambda x, y : proporcao(aptidao(x), aptidao(y)))
+        proporcao_genes = 0.5 if rand.random() < p_uniforme else (lambda x, y : proporcao(aptidao(x), aptidao(y)))
 
         população = cruzar(populacao, proporcao_genes)
         for idv in populacao : mutar(idv)
