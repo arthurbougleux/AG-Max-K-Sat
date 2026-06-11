@@ -1,0 +1,15 @@
+Fit máximo médio de n exec / gen
+Fit médio / tam
+
+G1:
+    y: aptidao média de 30 execs (abordagem)
+    x: geracoes
+
+G2:
+    y: aptidao média de 30 execs (abordagem)
+    x: tamanho de instancia
+
+
+A1: 10 gens --chaos 0.2 --search reckless --steps 1
+A2: 10 gens --chaos 0.2
+A3: 10 gens --uniforme 0.2

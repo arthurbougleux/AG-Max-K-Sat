@@ -1,0 +1,183 @@
+-- Abordagem: --chaos 0.2 --search reckless --steps 1
+Trail: 341 362 363 365 365 365 365 365 365 365
+Cláusulas satisfeitas: 365/426 (85.7%)
+Trail: 336 368 368 368 368 368 368 368 368 368
+Cláusulas satisfeitas: 368/426 (86.4%)
+Trail: 332 367 370 370 370 370 370 370 372 372
+Cláusulas satisfeitas: 372/426 (87.3%)
+Trail: 331 360 360 360 360 360 364 364 366 366
+Cláusulas satisfeitas: 366/426 (85.9%)
+Trail: 330 351 358 358 358 358 358 361 361 366
+Cláusulas satisfeitas: 366/426 (85.9%)
+Trail: 330 354 358 363 363 363 363 363 363 367
+Cláusulas satisfeitas: 368/426 (86.4%)
+Trail: 334 358 358 360 360 360 362 364 364 364
+Cláusulas satisfeitas: 364/426 (85.4%)
+Trail: 340 353 354 357 363 363 363 368 368 368
+Cláusulas satisfeitas: 368/426 (86.4%)
+Trail: 333 359 362 362 363 369 369 369 369 369
+Cláusulas satisfeitas: 369/426 (86.6%)
+Trail: 332 361 361 361 361 365 365 365 365 365
+Cláusulas satisfeitas: 366/426 (85.9%)
+Trail: 329 361 361 361 361 362 362 362 363 363
+Cláusulas satisfeitas: 366/426 (85.9%)
+Trail: 338 359 361 366 372 372 372 372 372 372
+Cláusulas satisfeitas: 372/426 (87.3%)
+Trail: 339 353 360 360 368 368 368 368 368 368
+Cláusulas satisfeitas: 368/426 (86.4%)
+Trail: 338 355 355 358 361 362 366 366 366 366
+Cláusulas satisfeitas: 366/426 (85.9%)
+Trail: 336 359 359 359 360 361 361 363 363 363
+Cláusulas satisfeitas: 363/426 (85.2%)
+Trail: 333 358 359 363 363 363 364 365 369 369
+Cláusulas satisfeitas: 369/426 (86.6%)
+Trail: 338 359 365 365 365 365 365 365 365 365
+Cláusulas satisfeitas: 365/426 (85.7%)
+Trail: 338 354 354 354 358 358 362 362 362 362
+Cláusulas satisfeitas: 362/426 (85.0%)
+Trail: 338 353 360 360 360 360 360 360 360 360
+Cláusulas satisfeitas: 360/426 (84.5%)
+Trail: 334 359 359 360 364 365 366 368 368 368
+Cláusulas satisfeitas: 368/426 (86.4%)
+Trail: 335 362 362 362 362 362 362 362 362 362
+Cláusulas satisfeitas: 362/426 (85.0%)
+Trail: 329 361 361 367 367 367 367 367 367 367
+Cláusulas satisfeitas: 367/426 (86.2%)
+Trail: 341 350 351 352 355 355 355 360 364 364
+Cláusulas satisfeitas: 364/426 (85.4%)
+Trail: 330 357 357 357 357 357 361 362 364 364
+Cláusulas satisfeitas: 364/426 (85.4%)
+Trail: 332 347 357 357 357 357 357 357 357 357
+Cláusulas satisfeitas: 357/426 (83.8%)
+Trail: 333 355 368 368 368 368 368 368 368 368
+Cláusulas satisfeitas: 369/426 (86.6%)
+Trail: 336 363 368 368 368 368 368 368 370 370
+Cláusulas satisfeitas: 370/426 (86.9%)
+Trail: 332 371 371 371 371 371 371 371 371 371
+Cláusulas satisfeitas: 371/426 (87.1%)
+Trail: 335 359 359 364 364 364 364 364 364 364
+Cláusulas satisfeitas: 364/426 (85.4%)
+Trail: 340 349 351 351 351 364 364 364 364 364
+Cláusulas satisfeitas: 364/426 (85.4%)
+-- Abordagem: --chaos 0.2
+Trail: 330 333 333 333 337 337 340 340 340 340
+Cláusulas satisfeitas: 340/426 (79.8%)
+Trail: 339 339 339 339 339 339 340 342 342 342
+Cláusulas satisfeitas: 342/426 (80.3%)
+Trail: 332 334 334 337 340 340 340 340 340 340
+Cláusulas satisfeitas: 341/426 (80.0%)
+Trail: 334 335 335 336 340 340 340 340 340 340
+Cláusulas satisfeitas: 344/426 (80.8%)
+Trail: 328 334 334 334 334 334 337 339 339 339
+Cláusulas satisfeitas: 339/426 (79.6%)
+Trail: 338 338 338 338 338 339 339 339 339 339
+Cláusulas satisfeitas: 343/426 (80.5%)
+Trail: 337 339 339 339 339 339 339 339 339 339
+Cláusulas satisfeitas: 340/426 (79.8%)
+Trail: 343 343 343 343 343 343 343 343 343 345
+Cláusulas satisfeitas: 346/426 (81.2%)
+Trail: 336 342 342 342 342 342 342 342 342 342
+Cláusulas satisfeitas: 342/426 (80.3%)
+Trail: 338 338 338 338 338 338 338 338 338 338
+Cláusulas satisfeitas: 339/426 (79.6%)
+Trail: 342 342 342 342 342 342 342 342 342 342
+Cláusulas satisfeitas: 343/426 (80.5%)
+Trail: 335 335 339 339 339 339 339 339 339 339
+Cláusulas satisfeitas: 348/426 (81.7%)
+Trail: 334 334 334 334 336 336 336 337 337 337
+Cláusulas satisfeitas: 339/426 (79.6%)
+Trail: 334 334 334 334 334 334 334 334 334 334
+Cláusulas satisfeitas: 335/426 (78.6%)
+Trail: 333 334 334 334 334 334 334 334 334 334
+Cláusulas satisfeitas: 340/426 (79.8%)
+Trail: 328 328 331 331 334 334 340 340 340 340
+Cláusulas satisfeitas: 343/426 (80.5%)
+Trail: 333 334 334 334 334 334 335 335 335 338
+Cláusulas satisfeitas: 341/426 (80.0%)
+Trail: 340 340 340 340 340 340 340 340 340 340
+Cláusulas satisfeitas: 340/426 (79.8%)
+Trail: 332 332 332 333 333 335 336 336 338 338
+Cláusulas satisfeitas: 338/426 (79.3%)
+Trail: 335 335 335 335 335 336 336 336 340 341
+Cláusulas satisfeitas: 344/426 (80.8%)
+Trail: 331 335 336 336 336 336 336 336 336 336
+Cláusulas satisfeitas: 343/426 (80.5%)
+Trail: 331 336 336 336 336 342 342 342 342 342
+Cláusulas satisfeitas: 343/426 (80.5%)
+Trail: 332 334 336 336 336 336 336 340 343 343
+Cláusulas satisfeitas: 345/426 (81.0%)
+Trail: 340 340 340 340 340 340 340 340 340 340
+Cláusulas satisfeitas: 344/426 (80.8%)
+Trail: 336 336 336 338 338 338 338 338 338 338
+Cláusulas satisfeitas: 344/426 (80.8%)
+Trail: 333 335 335 335 337 337 339 339 339 339
+Cláusulas satisfeitas: 346/426 (81.2%)
+Trail: 346 346 346 346 346 346 346 346 346 346
+Cláusulas satisfeitas: 346/426 (81.2%)
+Trail: 334 334 334 339 339 339 339 339 339 339
+Cláusulas satisfeitas: 342/426 (80.3%)
+Trail: 340 340 340 343 344 345 345 345 345 345
+Cláusulas satisfeitas: 347/426 (81.5%)
+Trail: 334 334 337 337 339 339 341 341 341 341
+Cláusulas satisfeitas: 341/426 (80.0%)
+-- Abordagem: --uniforme 0.2
+Trail: 331 331 335 335 336 340 340 340 340 340
+Cláusulas satisfeitas: 345/426 (81.0%)
+Trail: 341 341 341 341 341 341 341 341 341 347
+Cláusulas satisfeitas: 349/426 (81.9%)
+Trail: 335 335 335 341 341 341 341 341 341 341
+Cláusulas satisfeitas: 341/426 (80.0%)
+Trail: 338 338 338 348 348 348 348 348 348 348
+Cláusulas satisfeitas: 348/426 (81.7%)
+Trail: 328 330 338 338 338 338 338 340 340 340
+Cláusulas satisfeitas: 356/426 (83.6%)
+Trail: 332 333 333 333 333 336 336 336 336 336
+Cláusulas satisfeitas: 342/426 (80.3%)
+Trail: 346 346 346 346 346 346 346 346 346 346
+Cláusulas satisfeitas: 346/426 (81.2%)
+Trail: 338 338 338 338 338 339 339 339 339 339
+Cláusulas satisfeitas: 339/426 (79.6%)
+Trail: 334 334 334 334 334 337 337 337 337 337
+Cláusulas satisfeitas: 341/426 (80.0%)
+Trail: 332 333 333 333 333 333 333 333 338 338
+Cláusulas satisfeitas: 338/426 (79.3%)
+Trail: 335 341 341 341 341 341 341 341 341 341
+Cláusulas satisfeitas: 344/426 (80.8%)
+Trail: 337 337 337 337 337 337 337 337 339 339
+Cláusulas satisfeitas: 344/426 (80.8%)
+Trail: 330 334 334 334 334 335 335 338 338 338
+Cláusulas satisfeitas: 338/426 (79.3%)
+Trail: 334 334 336 336 336 341 341 341 341 342
+Cláusulas satisfeitas: 344/426 (80.8%)
+Trail: 336 336 336 336 336 336 336 340 340 340
+Cláusulas satisfeitas: 340/426 (79.8%)
+Trail: 338 338 338 338 338 338 338 338 338 338
+Cláusulas satisfeitas: 338/426 (79.3%)
+Trail: 338 338 338 338 338 338 338 338 338 338
+Cláusulas satisfeitas: 349/426 (81.9%)
+Trail: 336 336 337 339 339 339 339 339 339 339
+Cláusulas satisfeitas: 347/426 (81.5%)
+Trail: 338 338 338 338 338 338 344 344 344 344
+Cláusulas satisfeitas: 348/426 (81.7%)
+Trail: 342 342 342 342 347 347 347 347 347 349
+Cláusulas satisfeitas: 349/426 (81.9%)
+Trail: 336 336 336 336 340 340 340 340 340 340
+Cláusulas satisfeitas: 342/426 (80.3%)
+Trail: 335 335 338 340 340 340 341 342 344 344
+Cláusulas satisfeitas: 344/426 (80.8%)
+Trail: 343 343 343 343 343 346 346 346 346 346
+Cláusulas satisfeitas: 346/426 (81.2%)
+Trail: 338 338 338 338 338 338 338 338 338 338
+Cláusulas satisfeitas: 347/426 (81.5%)
+Trail: 340 340 340 340 340 340 340 340 340 340
+Cláusulas satisfeitas: 343/426 (80.5%)
+Trail: 336 336 336 336 339 340 341 341 341 341
+Cláusulas satisfeitas: 344/426 (80.8%)
+Trail: 336 336 336 336 337 337 337 337 337 337
+Cláusulas satisfeitas: 340/426 (79.8%)
+Trail: 344 344 344 344 344 344 344 344 344 344
+Cláusulas satisfeitas: 345/426 (81.0%)
+Trail: 332 332 334 337 337 337 337 337 337 337
+Cláusulas satisfeitas: 339/426 (79.6%)
+Trail: 338 338 338 338 338 338 338 338 338 338
+Cláusulas satisfeitas: 342/426 (80.3%)

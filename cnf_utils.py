@@ -34,3 +34,34 @@ def read_cnf(filename):
             exit(1)
         
         return n, m, clauses
+    
+def read_wcnf(filename):
+
+    with open(filename, "r") as file:
+
+        clauses = []
+
+        for line in file:
+
+            if line.startswith("c "):
+                continue
+            
+            if line.startswith("p "):
+                n, m = list(map(int, line.split()[2:4]))
+                break
+
+
+        for line in file:
+
+            if line.startswith("c "):
+                continue
+            
+            cl = list(map(int, line.split()[1:-1]))
+            clauses.append(cl)
+
+        
+        if len(clauses) != m:
+            print("Nº cláusulas lidas difere do informado no header")
+            exit(1)
+        
+        return n, m, clauses

@@ -29,7 +29,7 @@ def mutacao_limitada(sol, maxmutacoes):
         return
 
     n = len(sol)
-    nmutacoes = rand.randint(1, maxmutacoes)
+    nmutacoes = rand.randint(0, maxmutacoes)
 
     targets = rand.sample(range(n), nmutacoes)
     for t in targets:
@@ -54,7 +54,7 @@ def best_breeds_all(ppl, aptidao, calc_p):
     best = max(ppl, key=aptidao) ##
     apt_best = aptidao(best)
 
-    return list(map(lambda x : crossover_proporcional(best, x, calc_p(best, x)) if x != best else x, ppl))
+    return apt_best, best, list(map(lambda x : crossover_proporcional(best, x, calc_p(best, x)) if x != best else x, ppl))
 
 def reckless_choice(sol, clauses):
 
@@ -111,14 +111,18 @@ def proporcao(x,y):
 
 def genetico(populacao, aptidao, cruzar, mutar, desenvolver, max_gens, p_uniforme):
 
+    trail = []
+
     while max_gens:
         
         proporcao_genes = (lambda _, __ : 0.5) if rand.random() < p_uniforme else (lambda x, y : proporcao(aptidao(x), aptidao(y)))
 
-        população = cruzar(populacao, proporcao_genes)
-        for idv in populacao : mutar(idv)
+        apt_best, best, população = cruzar(populacao, proporcao_genes)
+        for idv in populacao : 
+            if idv != best : mutar(idv)
         for idv in populacao : desenvolver(idv)
 
         max_gens -= 1
+        trail.append(apt_best)
 
-    return max(população, key=aptidao)
+    return max(população, key=aptidao), trail

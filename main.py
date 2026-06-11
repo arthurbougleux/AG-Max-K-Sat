@@ -16,7 +16,7 @@ args = parser.parse_args()
 
 nsol = int(args.population)
 max_gens = int(args.generations)
-n, m, cdb = read_cnf(args.filename)
+n, m, cdb = read_wcnf(args.filename)
 
 
 
@@ -39,17 +39,20 @@ else:
     desenvolvimento = lambda x : x
 
 
-sol = genetico(populacao_inicial(n, nsol), aptidao, cruzamento, mutacao, desenvolvimento, max_gens, args.uniforme)
+sol, trail = genetico(populacao_inicial(n, nsol), aptidao, cruzamento, mutacao, desenvolvimento, max_gens, args.uniforme)
 apt = aptidao(sol)
 
-if args.verbose > 1: 
+if args.verbose > 2: 
    print("Solução:")
    for i in range(len(sol)): 
      print(f"x{i} = {sol[i]}")
 
+if args.verbose > 1:
+   print("Sol:", " ".join(map(str, sol)))
+
 if args.verbose:
-   for v in sol : print(v, end=' ')
-   print()
+   print("Trail:", " ".join(map(str, trail)))
+
 
 
 print(f"Cláusulas satisfeitas: {apt}/{m} ({apt/m:.1%})")
