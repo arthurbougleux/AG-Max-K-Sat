@@ -1,9 +1,9 @@
 #!/bin/bash
 
-gens=10
+gens=20
 out="lots.csv"
 
-for file in $( ls resp_10gens/* ); do
+for file in $( ls resp/* ); do
 
     python3 collect.py $file $gens > $( basename $file ).csv
 done;
